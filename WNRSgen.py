@@ -16,7 +16,7 @@ def fillincells():
             run.font.bold = True
             run.font.name = 'Calibri'
             run.font.size = Pt(24)
-            run.font.color.rgb = RGBColor(0x7E, 0x35, 0x17)
+            run.font.color.rgb = RGBColor(0x9E, 0x10, 0x00)
 
 lines = []
 with open('wnrslines.txt','r') as f:
@@ -49,10 +49,18 @@ for row in table.rows:
     row.height = Cm(5.6)
 
 table.cell(0, 0).paragraphs[0].paragraph_format.alignment = WD_TABLE_ALIGNMENT.CENTER
-table.cell(0, 1).paragraphs[0].paragraph_format.alignment = WD_TABLE_ALIGNMENT.CENTER
-table.cell(1, 0).paragraphs[0].paragraph_format.alignment = WD_TABLE_ALIGNMENT.CENTER
-table.cell(1, 1).paragraphs[0].paragraph_format.alignment = WD_TABLE_ALIGNMENT.CENTER #horizontal allignment
+table.cell(0, 0).vertical_alignment = WD_TABLE_ALIGNMENT.CENTER
+for i in range((len(recfixed))):
+    table.cell(0, 0 + i).paragraphs[0].paragraph_format.alignment = WD_TABLE_ALIGNMENT.CENTER
+    table.cell(0, 0 + i).vertical_alignment = WD_TABLE_ALIGNMENT.CENTER
+    for j in range((len(recfixed))-1):
+        table.cell(0 + j, 0 + i).paragraphs[0].paragraph_format.alignment = WD_TABLE_ALIGNMENT.CENTER
+        table.cell(0 + j, 0 + i).vertical_alignment = WD_TABLE_ALIGNMENT.CENTER
+        for k in range((len(recfixed))-1):
+            table.cell(0 + j, 0).paragraphs[0].paragraph_format.alignment = WD_TABLE_ALIGNMENT.CENTER
+            table.cell(0 + j, 0).vertical_alignment = WD_TABLE_ALIGNMENT.CENTER
 
-table.cell(1, 1).vertical_alignment = WD_TABLE_ALIGNMENT.CENTER #vertical allignment
+# table.cell(1, 1).paragraphs[0].paragraph_format.alignment = WD_TABLE_ALIGNMENT.CENTER #horizontal allignment
+# table.cell(1, 1).vertical_alignment = WD_TABLE_ALIGNMENT.CENTER #vertical allignment
 
 document.save('WNRSprint.docx')
