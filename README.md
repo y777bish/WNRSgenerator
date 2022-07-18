@@ -5,7 +5,7 @@ This is a project which focuses on making text-cards pattern for different games
 ## Details
 
 In this project I focused on mimicking the pattern of cards used in original card game "We Are Not Really Strangers" in order to create simple generator in which you can generate your own ones.
-Original site, where you can buy yourself [WNRS](https://www.werenotreallystrangers.com/) game
+Original site, where you can buy yourself [WNRS](https://www.werenotreallystrangers.com/) game (it's worth it).
 
 ## How it works?
 
