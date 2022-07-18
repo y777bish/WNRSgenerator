@@ -16,5 +16,5 @@ Because I wanted to mimick WNRS game cards style, the .docx document with each l
 
 To run the application firstly you need to download the project. Using Python console, type `“pip install python-docx”`, to install docx library.
 After that, in code, you should change the source of your .txt file with lines you want to format.
-Then you only need to compile the project, go grab some coffee, call your friends, maybe watch some Neon Genesis Evangelion in meantime (because the only issue this project has it's its operation time).
+Then you only need to compile the project, go grab some coffee, call your friends, maybe watch some Neon Genesis Evangelion in meantime (because the only issue this project has, is its operation time).
 But... you have time for yourself right? ... At the end you, in your project folder, .docx document file with formatted tables with cells will appear. Your only job now is to print it and crop them out.
