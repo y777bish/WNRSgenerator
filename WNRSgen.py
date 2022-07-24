@@ -30,10 +30,6 @@ def cellsmidifier():
             table.cell(0 + j, 0 + i).paragraphs[0].paragraph_format.alignment = WD_TABLE_ALIGNMENT.CENTER
             table.cell(0 + j, 0 + i).vertical_alignment = WD_TABLE_ALIGNMENT.CENTER
             print("Debug number second " + str(j))
-            for k in range((len(recfixed)) - recfixindex):
-                table.cell(0 + j, 0).paragraphs[0].paragraph_format.alignment = WD_TABLE_ALIGNMENT.CENTER
-                table.cell(0 + j, 0).vertical_alignment = WD_TABLE_ALIGNMENT.CENTER
-                print("Debug number third" + str(k))
 
 def testobject():
     print(lines)
